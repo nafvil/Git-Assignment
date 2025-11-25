@@ -23,3 +23,40 @@ double div(double a, double b) {
     }
     return a / b;
 }
+
+int main() {
+    double num1, num2, result;
+    char op;
+
+    printf("Simple Calculator\n");
+    printf("Enter first number: ");
+    scanf("%lf", &num1);
+
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &op);  // Note the space before %c to consume newline
+
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    switch (op) {
+        case '+':
+            result = add(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '-':
+            result = sub(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '*':
+            result = mul(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '/':
+            result = div(num1, num2);
+            if (num2 != 0) {
+                printf("Result: %.2lf\n", result);
+            }
+            break;
+        default:
+            printf("Invalid operator\n");
+    }
