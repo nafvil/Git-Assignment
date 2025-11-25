@@ -60,4 +60,3 @@ int main() {
         default:
             printf("Invalid operator\n");
     }
-    
