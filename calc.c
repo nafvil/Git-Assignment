@@ -37,3 +37,27 @@ int main() {
 
     printf("Enter second number: ");
     scanf("%lf", &num2);
+
+    switch (op) {
+        case '+':
+            result = add(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '-':
+            result = sub(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '*':
+            result = mul(num1, num2);
+            printf("Result: %.2lf\n", result);
+            break;
+        case '/':
+            result = div(num1, num2);
+            if (num2 != 0) {
+                printf("Result: %.2lf\n", result);
+            }
+            break;
+        default:
+            printf("Invalid operator\n");
+    }
+    
