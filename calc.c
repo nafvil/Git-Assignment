@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Function for addition
+double add(double a, double b) {
+    return a + b;
+}
+
+// Function for subtraction
+double sub(double a, double b) {
+    return a - b;
+}
+
+// Function for multiplication
+double mul(double a, double b) {
+    return a * b;
+}
+
+// Function for division (with zero check)
+double div(double a, double b) {
+    if (b == 0) {
+        printf("Math Error: Division by zero\n");
+        return 0;  // Return 0 on error, but ideally handle better
+    }
+    return a / b;
+}
